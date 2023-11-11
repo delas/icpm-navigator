@@ -44,7 +44,7 @@
           Here's a small text description for the card content. Nothing more, nothing less.
         </ion-card-content>
       </ion-card>
-      <ExploreContainer name="Home page" />
+
     </ion-content>
   </ion-page>
 </template>
