@@ -14,7 +14,7 @@ jobs:
             - name: Install and Build 🔧
               run: |
                   npm install
-                  npm run build
+                  ionic build
 
             - name: Deploy 🚀
               uses: actions/upload-pages-artifact@v1
