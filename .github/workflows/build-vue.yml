@@ -8,25 +8,26 @@ jobs:
         name: Application build
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout 🛎️
-              uses: actions/checkout@v3
-            - name: Use coturiv/setup-ionic
-              uses: coturiv/setup-ionic@v1
-              with:
-                java-version: 8
-            - name: Use coturiv/setup-ionic
-              uses: coturiv/setup-ionic@v1
-              with:
-                cordova-version: 8
-            
-            - name: Build
-              run: |
-                  ionic build
+          - name: Checkout Repository 🛎️
+            uses: actions/checkout@v3
+    
+          - name: Setup Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: 18
 
-            - name: Deploy 🚀
-              uses: actions/upload-pages-artifact@v1
-              with:
-                  path: ./dist
+          - name: Install Dependencies
+            run: |
+              npm install
+              npm install -g @ionic/cli
+    
+          - name: Build Ionic App
+            run: ionic build
+
+          - name: Deploy 🚀
+            uses: actions/upload-pages-artifact@v1
+            with:
+              path: ./dist
 
     deploy:
         name: Deploy to GitHub Pages
