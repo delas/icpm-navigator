@@ -18,5 +18,9 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom'
   },
-  base: "/icpm-navigator/"
+  base: "/icpm-navigator/",
+  build: {
+    cssCodeSplit: true,
+    minify: 'terser',
+  }
 })

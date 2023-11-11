@@ -27,6 +27,9 @@
             <ion-icon :icon="logOutOutline" slot="start" />
             <ion-label>Logout</ion-label>
           </ion-item>
+          <ion-item>
+            <ion-label>About the app</ion-label>
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
@@ -50,7 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon} from '@ionic/vue';
+import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonMenu, IonList, IonItem, IonLabel, IonButtons, IonMenuButton} from '@ionic/vue';
 import { settingsOutline, logOutOutline } from "ionicons/icons";
-import ExploreContainer from '@/components/ExploreContainer.vue';
 </script>
