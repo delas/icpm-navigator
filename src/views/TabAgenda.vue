@@ -3,16 +3,15 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>Agenda</ion-title>
+        <img
+            slot="end"
+            height="30"
+            style="margin-right: 10px"
+            src="https://icpmconference.org/2023/wp-content/uploads/sites/8/2022/10/icpm-logo-1.png" />
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <ExploreContainer name="Tab 1 page" />
+      <ExploreContainer name="Agenda" />
     </ion-content>
   </ion-page>
 </template>

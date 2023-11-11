@@ -32,7 +32,19 @@
     </ion-menu>
 
     <ion-content id="main-content" :fullscreen="true">
-      <ExploreContainer name="Tab 1 page" />
+      <img src="https://icpmconference.org/2024/wp-content/uploads/sites/9/2023/09/cph.jpg" />
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>ICPM 2024</ion-card-title>
+          <ion-card-subtitle>October 14-18, 2024; Copenhagen, Denmark</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+      <ExploreContainer name="Home page" />
     </ion-content>
   </ion-page>
 </template>

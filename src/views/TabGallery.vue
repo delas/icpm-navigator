@@ -3,6 +3,11 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>Gallery</ion-title>
+        <img
+            slot="end"
+            height="30"
+            style="margin-right: 10px"
+            src="https://icpmconference.org/2023/wp-content/uploads/sites/8/2022/10/icpm-logo-1.png" />
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
