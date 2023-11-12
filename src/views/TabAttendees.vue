@@ -11,7 +11,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <p>Here is the list of all attendees:</p>
+      <p class="ion-padding">Here is the list of all attendees:</p>
       <ion-list lines="full">
         <ion-item v-for="person in persons" :key="person.name">
           <ion-avatar aria-hidden="true" slot="start">
@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="js">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonAvatar, IonLabel } from '@ionic/vue';
 </script>
 
 <script lang="js">

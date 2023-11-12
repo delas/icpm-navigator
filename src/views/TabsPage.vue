@@ -21,6 +21,7 @@
         <ion-tab-button tab="images" href="/tabs/images">
           <ion-icon aria-hidden="true" :icon="images" />
           <ion-label>Gallery</ion-label>
+          <ion-badge color="danger">6</ion-badge>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
@@ -28,6 +29,6 @@
 </template>
 
 <script setup lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
+import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet, IonBadge } from '@ionic/vue';
 import {ellipse, square, triangle, home, calendar, people, images} from 'ionicons/icons';
 </script>
