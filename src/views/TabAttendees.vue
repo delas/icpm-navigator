@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <Header name="Attendees" />
+    <HeaderBar name="Attendees" />
     <ion-content :fullscreen="true">
       <p class="ion-padding">Here is the list of all attendees:</p>
       <ion-list lines="full">
@@ -20,7 +20,7 @@
 
 <script setup lang="js">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonAvatar, IonLabel } from '@ionic/vue';
-import Header from "@/components/Header.vue";
+import HeaderBar from "@/components/HeaderBar.vue";
 </script>
 
 <script lang="js">

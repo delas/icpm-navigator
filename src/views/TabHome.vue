@@ -1,7 +1,6 @@
 <template>
   <ion-page>
-    <Header name="Home" />
-    <SettingsMenu />
+    <HeaderBar name="Home" />
 
     <ion-content id="main-content" :fullscreen="true">
       <img src="https://icpmconference.org/2024/wp-content/uploads/sites/9/2023/09/cph.jpg" />
@@ -45,5 +44,5 @@
 <script setup lang="ts">
 import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonBadge, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonMenu, IonList, IonItem, IonLabel, IonButtons, IonMenuButton} from '@ionic/vue';
 import SettingsMenu from "@/components/SettingsMenu.vue";
-import Header from "@/components/Header.vue";
+import HeaderBar from "@/components/HeaderBar.vue";
 </script>

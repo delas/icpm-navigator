@@ -1,20 +1,22 @@
 <template>
   <ion-header>
     <ion-toolbar>
-      <ion-title>{{ this.name }}</ion-title>
+      <ion-title>{{ name }}</ion-title>
       <div
-          v-if="this.name != 'Home'"
+          v-if="name != 'Home'"
           slot="end"
           id="logo" />
-      <ion-buttons slot="end" v-if="this.name == 'Home'">
+      <ion-buttons slot="end" v-if="name == 'Home'">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+  <SettingsMenu />
 </template>
 
 <script setup lang="ts">
 import {IonButtons, IonHeader, IonMenuButton, IonTitle, IonToolbar} from "@ionic/vue";
+import SettingsMenu from "@/components/SettingsMenu.vue";
 
 defineProps({
   name: String,

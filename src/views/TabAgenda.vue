@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <Header name="Agenda" />
+    <HeaderBar name="Agenda" />
     <ion-content :fullscreen="true">
       <ExploreContainer name="Agenda" />
     </ion-content>
@@ -10,5 +10,5 @@
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
-import Header from "@/components/Header.vue";
+import HeaderBar from "@/components/HeaderBar.vue";
 </script>
