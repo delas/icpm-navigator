@@ -1,13 +1,6 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Home</ion-title>
-        <ion-buttons slot="end">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+    <Header name="Home" />
     <SettingsMenu />
 
     <ion-content id="main-content" :fullscreen="true">
@@ -52,4 +45,5 @@
 <script setup lang="ts">
 import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonBadge, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonMenu, IonList, IonItem, IonLabel, IonButtons, IonMenuButton} from '@ionic/vue';
 import SettingsMenu from "@/components/SettingsMenu.vue";
+import Header from "@/components/Header.vue";
 </script>

@@ -1,15 +1,6 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Attendees</ion-title>
-        <img
-            slot="end"
-            height="30"
-            style="margin-right: 10px"
-            src="https://icpmconference.org/2023/wp-content/uploads/sites/8/2022/10/icpm-logo-1.png" />
-      </ion-toolbar>
-    </ion-header>
+    <Header name="Attendees" />
     <ion-content :fullscreen="true">
       <p class="ion-padding">Here is the list of all attendees:</p>
       <ion-list lines="full">
@@ -29,6 +20,7 @@
 
 <script setup lang="js">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonAvatar, IonLabel } from '@ionic/vue';
+import Header from "@/components/Header.vue";
 </script>
 
 <script lang="js">

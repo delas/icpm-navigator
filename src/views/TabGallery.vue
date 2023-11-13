@@ -1,15 +1,6 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Gallery</ion-title>
-        <img
-            slot="end"
-            height="30"
-            style="margin-right: 10px"
-            src="https://icpmconference.org/2023/wp-content/uploads/sites/8/2022/10/icpm-logo-1.png" />
-      </ion-toolbar>
-    </ion-header>
+    <Header name="Gallery" />
     <ion-content :fullscreen="true">
       <ion-grid>
         <ion-row>
@@ -34,6 +25,7 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFab, IonFabButton, IonIcon, IonGrid, IonRow, IonCol, IonImg } from '@ionic/vue';
 import { camera, trash, close } from 'ionicons/icons';
 import { usePhotoGallery, UserPhoto } from '@/composables/usePhotoGallery';
+import Header from "@/components/Header.vue";
 
 const { photos, takePhoto } = usePhotoGallery();
 
