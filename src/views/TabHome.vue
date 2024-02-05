@@ -18,22 +18,9 @@
         Pages
       </p>
       <ion-list lines="full">
-        <ion-item button="true">
-          <ion-label>Messges from the organizers</ion-label>
-          <ion-badge color="danger">Updated!</ion-badge>
-        </ion-item>
-        <ion-item button="true">
-          <ion-label>Information about excursion</ion-label>
-        </ion-item>
-        <ion-item button="true">
-          <ion-label>Travelling information</ion-label>
-        </ion-item>
-        <ion-item button="true">
-          <ion-label>Conference venue</ion-label>
-          <ion-badge color="danger">Updated!</ion-badge>
-        </ion-item>
-        <ion-item button="true">
-          <ion-label>Food information</ion-label>
+        <ion-item v-for="page in pages" v-bind:key="page.id">
+          <ion-label :routerLink="'/tabs/page/' + page.id" >{{ page.name }}</ion-label>
+          <ion-badge v-if="page.label" color="danger">{{ page.label }}</ion-badge>
         </ion-item>
       </ion-list>
 
@@ -41,8 +28,23 @@
   </ion-page>
 </template>
 
-<script setup lang="ts">
+<script setup lang="js">
 import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonBadge, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonMenu, IonList, IonItem, IonLabel, IonButtons, IonMenuButton} from '@ionic/vue';
 import SettingsMenu from "@/components/SettingsMenu.vue";
 import HeaderBar from "@/components/HeaderBar.vue";
+</script>
+
+<script lang="js">
+export default {
+  data() {
+    return {
+      pages: [
+        { id: 1, name: 'Messages from the organizers', label: 'Updated' },
+        { id: 2, name: 'Information about excursion'},
+        { id: 3, name: 'Travelling information', label: 'Updated'},
+        { id: 4, name: 'Conference venue'},
+        { id: 5, name: 'Food information'},
+      ]};
+    }
+  }
 </script>
