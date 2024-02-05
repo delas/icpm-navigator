@@ -1,8 +1,9 @@
 <template>
   <ion-page>
     <HeaderBar name="Agenda" />
+
     <ion-toolbar>
-      <ion-segment value="default">
+      <ion-segment value="all">
         <ion-segment-button value="mon"><ion-label>Mon</ion-label></ion-segment-button>
         <ion-segment-button value="tue"><ion-label>Tue</ion-label></ion-segment-button>
         <ion-segment-button value="wed"><ion-label>Wed</ion-label></ion-segment-button>
@@ -11,7 +12,7 @@
       </ion-segment>
     </ion-toolbar>
 
-    <ion-content id="main-content" :fullscreen="true">
+    <ion-content id="main-content">
       <ion-list>
         <ion-item-group v-for="(session, sindex) in sessions" v-bind:key="sindex">
           <ion-item-divider sticky>
