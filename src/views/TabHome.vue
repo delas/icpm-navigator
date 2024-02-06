@@ -18,7 +18,7 @@
         Pages
       </p>
       <ion-list lines="full">
-        <ion-item v-for="page in pages" v-bind:key="page.id">
+        <ion-item button="true" v-for="page in pages" v-bind:key="page.id">
           <ion-label :routerLink="'/tabs/page/' + page.id" >{{ page.name }}</ion-label>
           <ion-badge v-if="page.label" color="danger">{{ page.label }}</ion-badge>
         </ion-item>
