@@ -30,5 +30,5 @@
 
 <script setup lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet, IonBadge } from '@ionic/vue';
-import {ellipse, square, triangle, home, calendar, people, images} from 'ionicons/icons';
+import { home, calendar, people, images } from 'ionicons/icons';
 </script>
