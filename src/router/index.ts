@@ -34,6 +34,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'page/:id',
         component: () => import('@/views/TabSinglePage.vue')
+      },
+      {
+        path: 'about',
+        component: () => import('@/views/TabAbout.vue')
       }
     ]
   }

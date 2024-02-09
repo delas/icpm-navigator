@@ -18,7 +18,7 @@
             Settings
           </ion-label>
         </ion-item>
-        <ion-item button="true">
+        <ion-item button="true" :routerLink="'/tabs/about/'">
           <ion-label>
             <ion-icon :icon="informationCircleOutline" slot="start" />
             About the app

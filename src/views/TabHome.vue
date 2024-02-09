@@ -7,10 +7,14 @@
 
       <ion-card>
         <ion-card-header>
+          <div id="logo-large" />
           <ion-card-title>ICPM 2024</ion-card-title>
-          <ion-card-subtitle>October 14-18, 2024</ion-card-subtitle>
-          <ion-card-subtitle>Copenhagen, Denmark</ion-card-subtitle>
         </ion-card-header>
+        <ion-card-content>
+          October 14-18, 2024<br>
+          Technical University of Denmark<br>
+          Kgs. Lyngby, Denmark
+        </ion-card-content>
       </ion-card>
 
 
@@ -48,3 +52,24 @@ export default {
     }
   }
 </script>
+
+<style scoped>
+#logo-large {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+@media (prefers-color-scheme: light) {
+  #logo-large {
+    background-image: url("@/assets/images/icpm-logo-1.png");
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #logo-large {
+    background-image: url("@/assets/images/icpm-logo-2.png");
+  }
+}
+</style>

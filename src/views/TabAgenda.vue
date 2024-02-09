@@ -3,7 +3,7 @@
     <HeaderBar name="Agenda" />
 
     <ion-toolbar>
-      <ion-segment value="all">
+      <ion-segment value="all" v-model="this.selectedDay">
         <ion-segment-button value="mon"><ion-label>Mon</ion-label></ion-segment-button>
         <ion-segment-button value="tue"><ion-label>Tue</ion-label></ion-segment-button>
         <ion-segment-button value="wed"><ion-label>Wed</ion-label></ion-segment-button>
@@ -13,7 +13,7 @@
     </ion-toolbar>
 
     <ion-content id="main-content">
-      <ion-list>
+      <ion-list v-if="selectedDay">
         <ion-item-group v-for="(session, sindex) in sessions" v-bind:key="sindex">
           <ion-item-divider color="light" sticky>
             <ion-label>
@@ -37,6 +37,9 @@
           </ion-item-sliding>
         </ion-item-group>
       </ion-list>
+      <div v-else>
+        <p class="ion-padding select-day">Select a day from the top to see the agenda.</p>
+      </div>
     </ion-content>
   </ion-page>
 </template>
@@ -65,6 +68,7 @@ import HeaderBar from "@/components/HeaderBar.vue";
 export default {
   data() {
     return {
+      selectedDay: null,
       sessions: [
         {
           time: '08:00',
@@ -143,3 +147,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.select-day {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+</style>
+
